@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-05T13:25:46.848Z",
+        "start_timestamp": "2020-08-06T13:34:26.162Z",
         "line": 14,
         "name": "Verify if Place is being successfully added using AddPlaceAPI",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1821420193,
+              "duration": 1717990522,
               "status": "passed"
             },
             "line": 5,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 2318385216,
+              "duration": 3672625681,
               "status": "passed"
             },
             "line": 6,
@@ -77,7 +77,7 @@
           },
           {
             "result": {
-              "duration": 4017801,
+              "duration": 3526634,
               "status": "passed"
             },
             "line": 7,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 582583631,
+              "duration": 654661646,
               "status": "passed"
             },
             "line": 8,
@@ -117,7 +117,7 @@
           },
           {
             "result": {
-              "duration": 14610408,
+              "duration": 17491438,
               "status": "passed"
             },
             "line": 9,
@@ -139,7 +139,7 @@
           },
           {
             "result": {
-              "duration": 421459584,
+              "duration": 852183424,
               "status": "passed"
             },
             "line": 10,
@@ -171,11 +171,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-05T13:25:52.046Z",
+        "start_timestamp": "2020-08-06T13:34:33.110Z",
         "before": [
           {
             "result": {
-              "duration": 593800,
+              "duration": 412972,
               "status": "passed"
             },
             "match": {
@@ -192,7 +192,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4915099,
+              "duration": 3152760,
               "status": "passed"
             },
             "line": 19,
@@ -204,7 +204,7 @@
           },
           {
             "result": {
-              "duration": 357700142,
+              "duration": 704244178,
               "status": "passed"
             },
             "line": 20,
@@ -226,7 +226,7 @@
           },
           {
             "result": {
-              "duration": 236054,
+              "duration": 150527,
               "status": "passed"
             },
             "line": 21,
@@ -244,7 +244,7 @@
           },
           {
             "result": {
-              "duration": 21453036,
+              "duration": 34795205,
               "status": "passed"
             },
             "line": 22,

@@ -8,7 +8,7 @@ pipeline{
 
 		steps{
 			echo "Building project"
-
+			bat "mvn clean"
 
 		}
 
@@ -17,16 +17,17 @@ pipeline{
 
 		steps{
 			echo "Test project"
-
+			bat "mvn test"
 
 		}
 
 	}
-	stage('Compile'){
+	
+	stage('Deploy'){
 
 		steps{
 			echo "Compiling project"
-
+			bat "mvn verify"
 
 		}
 

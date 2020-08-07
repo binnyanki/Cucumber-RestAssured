@@ -34,5 +34,19 @@ pipeline{
 	}
 
  }
+  post{
+  
+	always{
+		
+		emailext(
+			attachmentsPattern: '**/target/cucumber-html-reports/overview-features.html',
+			subject: "Execution status",
+			body: "See ${env.BUILD_URL} for more details",
+			to: "bishalgiet@gmail.com"
+		
+		)
+	}
+ 
+ }
 
 }

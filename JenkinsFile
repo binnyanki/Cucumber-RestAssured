@@ -46,6 +46,7 @@ pipeline{
 			attachmentsPattern: '**/target/cucumber-html-reports/overview-features.html',
 			subject: "Execution status",
 			body: "See ${env.BUILD_URL} for more details",
+			mimeType: 'text/html',
 			to: "bishalgiet@gmail.com",
 			
 		

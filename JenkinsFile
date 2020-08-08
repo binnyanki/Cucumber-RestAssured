@@ -28,7 +28,6 @@ pipeline{
 		steps{
 			echo "Compiling project"
 			bat "mvn verify"
-			archiveArtifacts artifacts: '**/target/cucumber-html-reports/overview-features.html'
 
 		}
 
@@ -38,6 +37,10 @@ pipeline{
   post{
   
 	always{
+	
+		archive (includes: '**/target/cucumber-html-reports/overview-features.html')
+		archive (includes: '**/logging.txt')
+		publishHTML ([allowMissing: false,alwaysLinkToLastBuild: false,keepAll: true,reportDir: '**/target/cucumber-html-reports',reportFiles: 'overview-features.html',reportName: "Cucumber Maven Report"])
 		
 		emailext(
 			attachmentsPattern: '**/target/cucumber-html-reports/overview-features.html',

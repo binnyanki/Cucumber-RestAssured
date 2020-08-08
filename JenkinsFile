@@ -28,6 +28,7 @@ pipeline{
 		steps{
 			echo "Compiling project"
 			bat "mvn verify"
+			archiveArtifacts artifacts: '**/target/cucumber-html-reports/overview-features.html'
 
 		}
 
@@ -42,7 +43,8 @@ pipeline{
 			attachmentsPattern: '**/target/cucumber-html-reports/overview-features.html',
 			subject: "Execution status",
 			body: "See ${env.BUILD_URL} for more details",
-			to: "bishalgiet@gmail.com"
+			to: "bishalgiet@gmail.com",
+			
 		
 		)
 	}

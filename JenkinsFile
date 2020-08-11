@@ -1,6 +1,11 @@
 pipeline{
 
   agent any
+  
+  tools{
+	maven 'M3'
+  
+  }
 
   stages{
 
@@ -17,7 +22,7 @@ pipeline{
 
 		steps{
 			echo "Test project"
-			bat "mvn test"
+			bat "mvn test -Dcucumber.options=--tags @${tag}"
 
 		}
 

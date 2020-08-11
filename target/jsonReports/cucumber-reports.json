@@ -3,53 +3,72 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-11T10:59:39.376Z",
-        "before": [
-          {
-            "result": {
-              "duration": 5736019068,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.before()"
-            }
-          }
-        ],
-        "line": 18,
-        "name": "Verify that delete Place API is working successfully",
+        "start_timestamp": "2020-08-11T15:47:32.602Z",
+        "line": 14,
+        "name": "Verify if Place is being successfully added using AddPlaceAPI",
         "description": "",
-        "id": "validating-place-api-s;verify-that-delete-place-api-is-working-successfully",
+        "id": "validating-place-api-s;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4039305,
+              "duration": 1804995152,
               "status": "passed"
             },
-            "line": 19,
-            "name": "deletePlace Payload",
+            "line": 5,
+            "name": "Add place payload \"Shaw House\" \"9518711374\" \"pune\" \"http://google.com\" \"English\" \"shoe park\" \"shop\"",
             "match": {
-              "location": "StepDefination.deleteplace_Payload()"
+              "arguments": [
+                {
+                  "val": "\"Shaw House\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"9518711374\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"pune\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"http://google.com\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 71
+                },
+                {
+                  "val": "\"shoe park\"",
+                  "offset": 81
+                },
+                {
+                  "val": "\"shop\"",
+                  "offset": 93
+                }
+              ],
+              "location": "StepDefination.add_place_payload(String,String,String,String,String,String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 637000622,
+              "duration": 3242407182,
               "status": "passed"
             },
-            "line": 20,
-            "name": "User calls \"deletePlaceAPI\" with \"POST\" http request",
+            "line": 6,
+            "name": "User calls \"AddPlaceAPI\" with \"POST\" http request",
             "match": {
               "arguments": [
                 {
-                  "val": "\"deletePlaceAPI\"",
+                  "val": "\"AddPlaceAPI\"",
                   "offset": 11
                 },
                 {
                   "val": "\"POST\"",
-                  "offset": 33
+                  "offset": 30
                 }
               ],
               "location": "StepDefination.user_calls_with_http_request(String,String)"
@@ -58,10 +77,10 @@
           },
           {
             "result": {
-              "duration": 489702,
+              "duration": 2388395,
               "status": "passed"
             },
-            "line": 21,
+            "line": 7,
             "name": "The API call is success with status code 200",
             "match": {
               "arguments": [
@@ -76,10 +95,10 @@
           },
           {
             "result": {
-              "duration": 45564730,
+              "duration": 557372306,
               "status": "passed"
             },
-            "line": 22,
+            "line": 8,
             "name": "\"status\" in response body is \"OK\"",
             "match": {
               "arguments": [
@@ -95,11 +114,59 @@
               "location": "StepDefination.in_response_body_is(String,String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13801082,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefination.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 573938100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User extracts \"place_id\" and verifies \"Shaw House\" using \"getPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"place_id\"",
+                  "offset": 14
+                },
+                {
+                  "val": "\"Shaw House\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"getPlaceAPI\"",
+                  "offset": 57
+                }
+              ],
+              "location": "StepDefination.user_extracts_and_verifies_using(String,String,String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@deletePlace"
+            "name": "@AddPlace"
           }
         ]
       }

@@ -22,7 +22,7 @@ pipeline{
 
 		steps{
 			echo "Test project"
-			bat "mvn test -Dcucumber.options=--tags @${tag}"
+			bat "mvn test -Dcucumber.options="--tags @${tag}""
 
 		}
 

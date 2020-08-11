@@ -3,179 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-08-07T13:32:04.336Z",
-        "line": 14,
-        "name": "Verify if Place is being successfully added using AddPlaceAPI",
-        "description": "",
-        "id": "validating-place-api-s;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2145882695,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "Add place payload \"Shaw House\" \"9518711374\" \"pune\" \"http://google.com\" \"English\" \"shoe park\" \"shop\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Shaw House\"",
-                  "offset": 18
-                },
-                {
-                  "val": "\"9518711374\"",
-                  "offset": 31
-                },
-                {
-                  "val": "\"pune\"",
-                  "offset": 44
-                },
-                {
-                  "val": "\"http://google.com\"",
-                  "offset": 51
-                },
-                {
-                  "val": "\"English\"",
-                  "offset": 71
-                },
-                {
-                  "val": "\"shoe park\"",
-                  "offset": 81
-                },
-                {
-                  "val": "\"shop\"",
-                  "offset": 93
-                }
-              ],
-              "location": "StepDefination.add_place_payload(String,String,String,String,String,String,String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3672373987,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User calls \"AddPlaceAPI\" with \"POST\" http request",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"AddPlaceAPI\"",
-                  "offset": 11
-                },
-                {
-                  "val": "\"POST\"",
-                  "offset": 30
-                }
-              ],
-              "location": "StepDefination.user_calls_with_http_request(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3373663,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "The API call is success with status code 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 41
-                }
-              ],
-              "location": "StepDefination.the_API_call_is_success_with_status_code(Integer)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 882603082,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "\"status\" in response body is \"OK\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"status\"",
-                  "offset": 0
-                },
-                {
-                  "val": "\"OK\"",
-                  "offset": 29
-                }
-              ],
-              "location": "StepDefination.in_response_body_is(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 21263411,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "\"scope\" in response body is \"APP\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"scope\"",
-                  "offset": 0
-                },
-                {
-                  "val": "\"APP\"",
-                  "offset": 28
-                }
-              ],
-              "location": "StepDefination.in_response_body_is(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 472247310,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User extracts \"place_id\" and verifies \"Shaw House\" using \"getPlaceAPI\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"place_id\"",
-                  "offset": 14
-                },
-                {
-                  "val": "\"Shaw House\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"getPlaceAPI\"",
-                  "offset": 57
-                }
-              ],
-              "location": "StepDefination.user_extracts_and_verifies_using(String,String,String)"
-            },
-            "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@AddPlace"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-08-07T13:32:11.562Z",
+        "start_timestamp": "2020-08-11T10:59:39.376Z",
         "before": [
           {
             "result": {
-              "duration": 330866,
+              "duration": 5736019068,
               "status": "passed"
             },
             "match": {
@@ -192,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3187459,
+              "duration": 4039305,
               "status": "passed"
             },
             "line": 19,
@@ -204,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 367194098,
+              "duration": 637000622,
               "status": "passed"
             },
             "line": 20,
@@ -226,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 247294,
+              "duration": 489702,
               "status": "passed"
             },
             "line": 21,
@@ -244,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 35678329,
+              "duration": 45564730,
               "status": "passed"
             },
             "line": 22,

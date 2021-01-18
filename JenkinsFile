@@ -1,0 +1,62 @@
+pipeline{
+
+  agent any
+  
+  tools{
+	maven 'M3'
+  
+  }
+
+  stages{
+
+	stage('Build'){
+
+		steps{
+			echo "Building project"
+			bat "mvn clean"
+
+		}
+
+	}
+	stage('Test'){
+
+		steps{
+			echo "Test project"
+			bat "mvn test"
+
+		}
+
+	}
+	
+	stage('Deploy'){
+
+		steps{
+			echo "Compiling project"
+			bat "mvn verify"
+
+		}
+
+	}
+
+ }
+  post{
+  
+	always{
+	
+		archiveArtifacts artifacts: '**/logging.txt'
+		publishHTML ([allowMissing: false,alwaysLinkToLastBuild: false,keepAll: true,reportDir: 'target/cucumber-html-reports',reportFiles: 'overview-features.html',reportName: "Cucumber Maven Report"])
+		
+		emailext(
+			attachmentsPattern: '**/target/cucumber-html-reports/overview-features.html',
+			subject: "Execution status",
+			body: "See ${env.BUILD_URL} for more details",
+			mimeType: 'text/html',
+			to: "bishalgiet@gmail.com",
+			
+		
+		)
+	}
+ 
+ }
+
+}
